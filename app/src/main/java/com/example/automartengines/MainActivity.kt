@@ -1,6 +1,10 @@
 package com.example.automartengines
 
+import android.content.Context
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +20,24 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val signin_button=findViewById<Button>(R.id.signin)
+        signin_button.setOnClickListener {
+            val sign_intent= Intent(applicationContext, SigninActivity::class.java)
+            startActivity(sign_intent)
+        }
+        val sognup_button=findViewById<Button>(R.id.Signup)
+        sognup_button.setOnClickListener {
+            val signup_intenet= Intent(applicationContext, SignupActivity::class.java)
+            startActivity(signup_intenet)
+        }   //endlistener
+//        find the textview by use of id
+        val text=findViewById<TextView>(R.id.tvusername)
+
+        //get username restored from api
+        val prefs=getSharedPreferences("user_session", Context.MODE_PRIVATE)
+        val username=prefs.getString("username","user")
+
+//        Bind to textview
+        text.text="Welcome, $username"
     }
 }
