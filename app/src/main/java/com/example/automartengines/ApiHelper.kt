@@ -69,7 +69,7 @@ class ApiHelper(var context: Context) {
                     Toast.makeText(context, "Welcome $username $email", Toast.LENGTH_LONG).show()
 
                     // Redirect to Dashboard
-                    val intent = Intent(context, MainActivity::class.java)
+                    val intent = Intent(context, Dashboard::class.java)
                     intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
                     context.startActivity(intent)
                 } else {
@@ -101,9 +101,9 @@ fun loadProducts(url: String, recyclerView: RecyclerView, progressBar: ProgressB
             response: JSONArray
         ) {
             progressBar?.visibility = View.GONE
-//            val productList = ProductAdapter.fromJsonArray(response)
-//            val adapter = ProductAdapter(productList)
-//            recyclerView.adapter = adapter
+            val productList = ProductAdapter.fromJsonArray(response)
+            val adapter = ProductAdapter(productList)
+            recyclerView.adapter = adapter
         }
 
         override fun onFailure(
