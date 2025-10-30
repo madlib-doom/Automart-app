@@ -18,7 +18,16 @@
         android:background="@drawable/shape"
         android:layout_marginBottom="10dp" />
 
-
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="Welcome to Automart Engines"
+    android:gravity="center"
+    android:textSize="30sp"
+    android:textColor="#1EE2DF"
+    android:textStyle="bold"
+    android:fontFamily="sans-serif-condensed"
+    />
 
         <Button
             android:layout_width="match_parent"
