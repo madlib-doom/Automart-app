@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#BFEF6E"
+    tools:context=".MakePayment">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Complete payment with M-pesa"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="50dp"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:textColor="#14AD1D"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtProductName"
+        android:text="Product Name"
+        android:layout_marginTop="20dp"
+
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:textColor="#0B0B0B"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/imgProduct"
+        android:src="@drawable/icon3"
+        android:scaleType="centerCrop"
+        android:layout_margin="5dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtProductCost"
+        android:text="Ksh 10"
+        android:layout_marginTop="10dp"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:textColor="#0720FF"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/phone"
+        android:hint="Enter phone number e.g 254687772"
+        android:textSize="20sp"
+        android:inputType="number"
+        android:textColorHint="#000000"
+        android:textColor="@color/black"
+        android:background="@drawable/bg_card"
+        android:padding="15dp"
+        android:layout_marginTop="10dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/pay"
+        android:text="Pay Now"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:backgroundTint="#0E3E11"
+        android:textSize="20sp"
+        android:padding="10dp"/>
+</LinearLayout>

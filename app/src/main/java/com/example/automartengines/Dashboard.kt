@@ -1,7 +1,12 @@
 package com.example.automartengines
 
+import android.content.Context
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ProgressBar
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -18,18 +23,35 @@ class Dashboard : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        //        find the textview by use of id
+        val text=findViewById<TextView>(R.id.tvUsername)
+
+        //get username restored from api
+        val prefs=getSharedPreferences("user_session", Context.MODE_PRIVATE)
+        val username=prefs.getString("username","user")
+
+//        Bind to textview
+        text.text="Welcome, $username"
+
         //        find the progress bar and recyclerview by use of their ids
 
         val progressbar=findViewById<ProgressBar>(R.id.progressbar)
         val recyclerView=findViewById<RecyclerView>(R.id.recycleView)
 
 //        Define url where you are fetching
-        val url="https://aarondev.pythonanywhere.com/api/getproducts"
+        val url="https://rexkinoo.pythonanywhere.com/api/getproducts"
 
 //        import Helper
         val helper= ApiHelper(applicationContext)
 
 //        we have a function called loadproducts which requires three parameteres
         helper.loadProducts(url,recyclerView,progressbar)
+//        findbutton by use of id
+        val buttonsell=findViewById<Button>(R.id.btnSell)
+
+        buttonsell.setOnClickListener {
+            val selpage= Intent(Intent.ACTION_VIEW, Uri.parse("https://spar-project-nine.vercel.app/addproducts"))
+            startActivity(selpage)
+        }
     }
 }

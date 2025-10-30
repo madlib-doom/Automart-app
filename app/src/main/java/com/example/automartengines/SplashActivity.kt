@@ -23,7 +23,7 @@ class SplashActivity : AppCompatActivity() {
         Handler().postDelayed({
             startActivity(Intent(applicationContext, MainActivity::class.java))
             finish()
-        },5000)
+        },2000)
         val logo1 = findViewById<ImageView>(R.id.logo1)
 
 

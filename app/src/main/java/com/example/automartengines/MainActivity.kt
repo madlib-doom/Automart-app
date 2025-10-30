@@ -32,15 +32,6 @@ class MainActivity : AppCompatActivity() {
             val signup_intenet= Intent(applicationContext, SignupActivity::class.java)
             startActivity(signup_intenet)
         }   //endlistener
-//        find the textview by use of id
-        val text=findViewById<TextView>(R.id.tvusername)
-
-        //get username restored from api
-        val prefs=getSharedPreferences("user_session", Context.MODE_PRIVATE)
-        val username=prefs.getString("username","user")
-
-//        Bind to textview
-        text.text="Welcome, $username"
 
 
 

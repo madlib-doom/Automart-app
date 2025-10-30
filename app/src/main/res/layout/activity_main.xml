@@ -17,17 +17,7 @@
         android:textColor="@color/white"
         android:background="@drawable/shape"
         android:layout_marginBottom="10dp" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/tvusername"
-        android:text="Welcome"
-        android:textSize="20sp"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textColor="#45D945"
-        android:layout_marginTop="10dp"
-        />
+
 
 
         <Button
