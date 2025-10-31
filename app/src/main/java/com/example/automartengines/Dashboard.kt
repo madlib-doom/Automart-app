@@ -52,6 +52,20 @@ class Dashboard : AppCompatActivity() {
         buttonsell.setOnClickListener {
             val selpage= Intent(Intent.ACTION_VIEW, Uri.parse("https://spar-project-nine.vercel.app/addproducts"))
             startActivity(selpage)
+        }//end listener
+//        find logout button and by use of its id
+        val logout=findViewById<Button>(R.id.btnLogout
+        )
+        logout.setOnClickListener {
+//            clear shared preferences
+            val prefs=getSharedPreferences("user_session", Context.MODE_PRIVATE)
+            prefs.edit().clear().apply()
+
+//            navigate to mainactivity
+            val firstpage= Intent(applicationContext, MainActivity::class.java)
+            startActivity(firstpage)
+
         }
+
     }
 }

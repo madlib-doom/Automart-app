@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:background="#29FDE7"
+    tools:context=".About">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About info"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:background="@drawable/shape"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to our Automart,Exclusive and well-patttented shop.
+It is designed for cars only and everything car-related for car engines to suspensions and more.
+Dive in and discover your missing part today!.Located on main street along abc road in Nairobi.You are welcme in this
+deluxe adventures un getting to style your
+car.You can also reach us on our
+website @automart engines.Come one come all."
+        android:textAlignment="center"
+        android:layout_marginTop="30dp"
+        android:id="@+id/textView"
+        android:layout_margin="15dp"
+        android:textColor="#D36E0D"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        />
+
+    <Button
+        android:id="@+id/speakButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#0B0B0B"
+        android:text="Listen"
+
+        android:backgroundTint="#ADCE37"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="20dp" />
+
+
+
+</LinearLayout>
