@@ -50,7 +50,7 @@ class Dashboard : AppCompatActivity() {
         val buttonsell=findViewById<Button>(R.id.btnSell)
 
         buttonsell.setOnClickListener {
-            val selpage= Intent(Intent.ACTION_VIEW, Uri.parse("https://spar-project-nine.vercel.app/addproducts"))
+            val selpage= Intent(applicationContext, Addproducts::class.java)
             startActivity(selpage)
         }//end listener
 //        find logout button and by use of its id

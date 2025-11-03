@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_card"
+    android:padding="16dp"
+    tools:context=".Addproducts">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Automart shop. We accept second-hand parts in our store. Kindly fill the form with correct details to continue."
+        android:textSize="18sp"
+        android:textColor="@android:color/black"
+        android:padding="8dp"/>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the product name"
+        android:textColorHint="#33B321"
+        android:textSize="20sp"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the product description"
+        android:textColorHint="#33B321"
+        android:textSize="20sp"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/cost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter the product cost"
+        android:textColorHint="#33B321"
+        android:textSize="20sp"
+        android:inputType="number"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/sell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Select Product Photo"
+        android:textColorHint="#33B321"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="false"/>
+
+    <Button
+        android:id="@+id/btnUpload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sell"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#33B321"
+        android:textColor="@android:color/white"/>
+
+
+</LinearLayout>
